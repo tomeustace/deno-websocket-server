@@ -1,0 +1,55 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DenoWebsocketServer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>WebSocket Client</h1>
+  <script>
+    const connectionId = Date.now().toString();
+    let ws = new WebSocket("ws://localhost:8080");
+    ws.onopen = () => {
+      console.log("WebSocket Open");
+      ws.send( JSON.stringify( {connectionId} ) );
+    }
+
+    // send a message to the server
+    setTimeout(() => {
+      ws.send( JSON.stringify( {connectionId, message: 'hi ghere!!'} ) );
+    }, 5000);
+
+  </script>
+</body>
+</html> -->
+<!-- ws-client.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DenoWebsocketServer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>WebSocket Client</h1>
+  <script>
+    const connectionId = Date.now().toString();
+    let ws = new WebSocket("ws://localhost:8080");
+    ws.onopen = () => {
+      console.log("WebSocket Open");
+      ws.send( JSON.stringify( {connectionId} ) );
+    }
+
+    // send a message to the server
+    setTimeout(() => {
+      ws.send( JSON.stringify( {connectionId, message: 'hi ghere!!'} ) );
+    }, 5000);
+
+  </script>
+</body>
+</html>

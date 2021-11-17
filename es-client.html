@@ -1,0 +1,60 @@
+<!-- <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DenoWebsocketServer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>Event Source Client</h1>
+  <script>
+
+    let eventSource = new EventSource("http://localhost:8082/events");
+    eventSource.onmessage = (event) => {
+      const {connectionId, message, close} = JSON.parse(event.data);
+      if (close) {
+        console.log(`connectionId ${close.connectionId}: closed`);
+        return;
+      }
+      if (connectionId && !message) {
+        console.log(`connectionId ${connectionId}: connected`);
+      } else {
+        console.log(`connectionId ${connectionId}: ${message}`);
+      }
+    }
+  </script>
+</body>
+</html> -->
+
+<!-- es-client.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DenoWebsocketServer</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>Event Source Client</h1>
+  <script>
+
+    let eventSource = new EventSource("http://localhost:8082/events");
+    eventSource.onmessage = (event) => {
+      const {connectionId, message, close} = JSON.parse(event.data);
+      if (close) {
+        console.log(`connectionId ${close.connectionId}: closed`);
+        return;
+      }
+      if (connectionId && !message) {
+        console.log(`connectionId ${connectionId}: connected`);
+      } else {
+        console.log(`connectionId ${connectionId}: ${message}`);
+      }
+    }
+  </script>
+</body>
+</html>
